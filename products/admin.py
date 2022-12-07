@@ -9,7 +9,7 @@ class ProductsAdmin(admin.ModelAdmin):
     list_display = ['title', 'created_at', 'photo']
 
     def photo(self, obj):
-        if obj.image
+        if obj.image:
             return mark_safe(f"<img src = {obj.image.url} width = '20%'>")
         else:
             return None
